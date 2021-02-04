@@ -53,7 +53,6 @@ class BankBot:
                     #print(line)
                     date_price.append(line)
                     drop = self.driver.find_element_by_xpath("/html/body/div[1]/div/div[4]/div[1]/div/table/tbody/tr["+str(row)+"]/td[2]/div/a[1]/span[3]").click()
-                    #drop.click()
                     try:
                         parent = self.driver.find_element_by_xpath("/html/body/div[1]/div/div[4]/div[1]/div/table/tbody/tr["+str(even_tag)+"]/td[2]/dl/dd[6]/span/span[2]").text
                         #print(parent)
@@ -72,7 +71,6 @@ class BankBot:
                             #print(line)
                             date_price.append(line)
                             drop = self.driver.find_element_by_xpath("/html/body/div[1]/div/div[4]/div[1]/div/table/tbody/tr["+str(numb)+"]/td[2]/div/a[1]/span[3]").click()
-                            #drop.click()
                             child = self.driver.find_element_by_xpath("/html/body/div[1]/div/div[4]/div[1]/div/table/tbody/tr["+str(numb+1)+"]/td[2]/dl/dd[9]/span/span[2]").text
                             #print(child)
                             category.append(child)
